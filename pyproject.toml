@@ -2,14 +2,12 @@
 requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
-
 [project]
 name = "amazons"
 version = "0.1.0"
 description = "Jeu des Amazones en Python (moteur, CLI, IA)"
 requires-python = ">=3.10"
 readme = "README.md"
-
 
 [tool.pytest.ini_options]
 minversion = "8.0"
