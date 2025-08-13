@@ -1,0 +1,49 @@
+# depuis le dossier du repo Amazon/
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+
+# Dossiers
+mkdir -p src/amazons tests
+mkdir -p docs
+
+# Fichiers Python (vides + docstrings)
+touch src/amazons/__init__.py
+cat > src/amazons/state.py << 'EOF'
+"""Représentation de l'état du jeu (plateau 10x10, amazones, blocs, joueur courant)."""
+EOF
+cat > src/amazons/rules.py << 'EOF'
+"""Génération des coups, application d'un coup, détection terminale."""
+EOF
+cat > src/amazons/search.py << 'EOF'
+"""Algorithmes de recherche (minimax/alpha-bêta) et heuristiques (plus tard)."""
+EOF
+cat > src/amazons/cli.py << 'EOF'
+"""Boucle de jeu console (humain vs humain/IA) — à implémenter après le moteur."""
+EOF
+cat > src/amazons/utils.py << 'EOF'
+"""Constantes, directions, conversions coordonnées (ex. (r,c) <-> 'a1')."""
+EOF
+
+# Tests (squelettes vides)
+cat > tests/test_rules.py << 'EOF'
+"""Tests unitaires du moteur de règles (bientôt)."""
+EOF
+cat > tests/test_search.py << 'EOF'
+"""Tests unitaires de l'IA (plus tard)."""
+EOF
+
+# README
+cat > README.md << 'EOF'
+# Amazons (Jeu des Amazones)
+
+Projet pédagogique pour implémenter le jeu des Amazones :
+- Moteur de règles (déplacements, tirs de flèche, positions terminales)
+- Interface console
+- IA (alpha-bêta + heuristiques)
+
+## Installation rapide
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
