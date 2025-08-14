@@ -22,3 +22,19 @@ class Rules:
                 nx += dx
                 ny += dy
         return moves
+    
+    def legal_arrows(self, state, src):
+        return self.ray_from(state, src)
+    
+    def legal_moves(self, state, src):
+        return self.ray_from(state, src)
+    
+    def check_move(self, state, src, dest):
+        if dest in self.legal_moves(state, src):
+            return True
+        return False
+    
+    def check_arrow(self, state, src, dest):
+        if dest in self.legal_arrows(state, src):
+            return True
+        return False

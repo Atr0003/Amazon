@@ -15,6 +15,7 @@ class GameState:
         self.board = [[EMPTY for _ in range(self.board_y)] for _ in range(self.board_X)]
         self.initialize_board()
         self.is_finished = False
+        self.stack = []
 
     def initialize_board(self):
         print("Initializing board...")
@@ -91,3 +92,9 @@ class GameState:
             self.is_finished = False
         else:
             self.is_finished = True
+
+    def get_stack(self):
+        return self.stack.pop() if self.stack else None
+    
+    def set_stack(self, stack):
+        self.stack.append(stack)
