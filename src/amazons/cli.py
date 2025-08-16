@@ -8,8 +8,11 @@ def main():
 
     while not game.get_is_finished():
         if game.get_turn_player() == PLAYER1:
-            game.display_board()
+            game.display_board() 
             choise = input("Enter your select choise amazon (e.g., 'choise 0 or 1'): ")
+            if choise not in ['0', '1']:
+                print("Invalid choice, try again.")
+                continue
             pos = game.get_player1_positions()[int(choise)]
             print(rules.legal_moves(game, pos))
             move_x = input("Enter your select possition move x : ")

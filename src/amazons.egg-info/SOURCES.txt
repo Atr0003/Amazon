@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/amazons/__init__.py
+src/amazons/cli.py
+src/amazons/rules.py
+src/amazons/search.py
+src/amazons/state.py
+src/amazons/utils.py
+src/amazons.egg-info/PKG-INFO
+src/amazons.egg-info/SOURCES.txt
+src/amazons.egg-info/dependency_links.txt
+src/amazons.egg-info/top_level.txt
+src/amazons_ui/__init__.py
+src/amazons_ui/ui_pygame.py
+tests/test_rules.py
+tests/test_search.py
+tests/test_smoke.py

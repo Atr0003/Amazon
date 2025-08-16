@@ -1,0 +1,2 @@
+amazons
+amazons_ui

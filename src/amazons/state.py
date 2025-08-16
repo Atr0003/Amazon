@@ -61,6 +61,11 @@ class GameState:
     def get_is_finished(self):
         return self.is_finished
     
+    def get_cell(self, r, c):
+        if 0 <= r < self.board_X and 0 <= c < self.board_y:
+            return self.board[r][c]
+        return None
+    
     ### Setters for the GameState class
 
     def set_player1_positions(self, positions, new_positions):

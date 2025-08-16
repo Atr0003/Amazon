@@ -1,6 +1,6 @@
 
 
-from state import GameState, EMPTY, BLOCK, PLAYER1, PLAYER2
+from amazons.state import GameState, EMPTY, BLOCK, PLAYER1, PLAYER2
 
 class Rules:
     def __init__(self):
