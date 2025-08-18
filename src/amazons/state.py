@@ -5,7 +5,7 @@ PLAYER2 = 2
 BLOCK = -1
 
 class GameState:
-    def __init__(self, board_X = 10, board_y = 10, pos_player1 = [(0, 0), (0, 9)], pos_player2 = [(9, 0), (9, 9)],  case_blocked = [], turn_player = PLAYER1):
+    def __init__(self, board_X = 8, board_y = 8, pos_player1 = [(0, 0), (0, 7)], pos_player2 = [(7, 0), (7, 7)],  case_blocked = [], turn_player = PLAYER1):
         self.board_X = board_X
         self.board_y = board_y
         self.pos_player1 = pos_player1
@@ -37,12 +37,9 @@ class GameState:
 
     ### Getters for the GameState class
 
-    def get_player1_positions(self):
-        return self.pos_player1
-    
-    def get_player2_positions(self):
-        return self.pos_player2
-    
+    def get_player_positions(self, player):
+        return self.pos_player1 if player == PLAYER1 else self.pos_player2
+
     def get_board(self):
         return self.board
     
@@ -67,6 +64,13 @@ class GameState:
         return None
     
     ### Setters for the GameState class
+
+    def set_player_positions(self, player, old_pos, new_pos):
+        if player == PLAYER1:
+            self.set_player1_positions(old_pos, new_pos)
+        else:
+            self.set_player2_positions(old_pos, new_pos)
+
 
     def set_player1_positions(self, positions, new_positions):
         if positions == self.pos_player1[0]:
